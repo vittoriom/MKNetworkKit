@@ -422,4 +422,16 @@
  */
 @property (nonatomic, assign) BOOL shouldSendAcceptLanguageHeader;
 
+//Disk cache management additions
+/*!
+ *  @abstract Cache Directory In Disk Size
+ *
+ *  @discussion
+ *  This method can be over-ridden by subclasses to provide an alternative in disk cache size.
+ *  By default, MKNetworkKit caches MKNETWORKCACHE_DEFAULT_DISK_SIZE bytes in disk cache
+ *  The default size is MKNETWORKCACHE_DEFAULT_DISK_SIZE (50 MB)
+ *  Overriding this method is optional
+ */
+-(unsigned long long int) cacheDiskSize;
+
 @end
